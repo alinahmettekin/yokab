@@ -6,6 +6,18 @@ html
     link(rel='stylesheet', href='/bootstrap/css/bootstrap.css')
 
   body
+    nav.navbar(style="background-color: #3498db;")
+      .container
+        .navbar-header
+          a.navbar-brand(href="/", style="color: white; font-size: 24px; text-decoration: none; font-weight: bold;") BLUE
+        ul.nav.navbar-nav
+          li
+            a(href="/gönderiler", style="color: white;") Gönderiler
+          li
+            a(href="/hakkinda", style="color: white;") Hakkında
+  .container
     block content
+    footer
+      small &copy; Ahmet Tekin - Furkan Ceyhan
   script(src='javascripts/jquery-3.6.1.min.js')
   script(src='/bootstrap/js/bootstrap.min.js')

@@ -1,0 +1,25 @@
+extends layout
+
+block content
+    #banner.page-header
+        .row
+            .col-lg-6
+                h1
+                    
+                    small &nbsp; Keşfet
+
+    .row
+        each post in postlar
+            .row.list-group
+                .col-xs-12.col-sm-12
+                    .col-xs-12.list-group-item
+                        h4
+                            a(href="/post")=post.ad
+                        h3
+                            p= post.post
+                        h5
+                            p= post.tarih
+                        if post.yorumlar.length > 0
+                            a(href='/yorumlar/'+post.postId) Yorumları Görüntüle
+                        else
+                            p Henüz bu post için hiç yorum yapılmamış.

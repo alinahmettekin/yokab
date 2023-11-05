@@ -1,0 +1,32 @@
+extends layout
+
+block content
+
+    .row
+        each post in postlar
+            if post.postId === postId
+                .col-xs-12.list-group
+                    h5
+                        p= post.ad
+                    h3
+                        p= post.post
+                    h6
+                        p= post.tarih
+                each yorum in post.yorumlar
+                        .row.list-group
+                        .col-xs-12.col-sm-12
+                            .col-xs-12.list-group-item
+                                h5
+                                    p= yorum.yorumYapan
+                                h3
+                                    p= yorum.yorum
+                                h6
+                                    p= yorum.yorumTarihi
+
+    // Yorum ekleme formu
+    form(action='/yorumEkle', method='POST', style="margin-top: 20px;")
+        .form-group
+            label(for='yorum') Yorum Yap:
+            input#yorum.form-control(type='text', name='yorum', placeholder='Yorumunuzu buraya girin', required)
+        button.btn.btn-primary(type='submit') Gönder
+
