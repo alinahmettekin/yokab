@@ -7,4 +7,4 @@ const hakkinda=function (req,res) {
 
 module.exports = {
     hakkinda,
-}
+};

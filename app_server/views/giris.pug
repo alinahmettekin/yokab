@@ -1,0 +1,14 @@
+extends layout
+html
+block content
+    .row
+        #login-form.col-lg-6
+            h2 Giriş Yap
+            form(action="/", method="post")
+                .form-group
+                    label(for="username") Kullanıcı Adı:
+                    input#username.form-control(type="text", name="username", required)
+                .form-group
+                    label(for="password") Şifre:
+                    input#password.form-control(type="password", name="password", required)
+                button.btn.btn-primary(type="submit") Giriş Yap

@@ -1,0 +1,30 @@
+extends layout
+
+block content
+
+    .row
+        .col-lg-2
+            // Boş sidebar bölümü
+        .col-lg-10
+            .user-profile-container
+                .user-info
+                    h2 
+                        p=user.ad
+
+                    // Kullanıcı fotoğrafını göstermek için kontrol ekleyin
+                    if user.userPhotoId
+                        img(src='/images/'+user.userPhotoId+".jpg", alt='User Photo', class='user-photo', style='width: 150px; height: 150px;')
+
+                ul.user-details
+                    li 
+                        strong UserID:
+                        span #{user.userId}
+                    li 
+                        strong Ad:
+                        span #{user.ad}
+                    li 
+                        strong Son Giriş Zamanı:
+                        span #{user.lastLoginTime}
+                    li 
+                        strong Kayıt Tarihi:
+                        span #{user.signUpDate}

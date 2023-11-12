@@ -1,5 +1,5 @@
 @import url("//fonts.googleapis.com/css?family=Lobster|Cabin:400,700");
-@import url("//fonts.googleapis.com/css?family=Spinnaker|Cabin:400,700");
+@import url("//fonts.googleapis.com/css?family=Roboto|Cabin:400,700");
 
 /*!
  * Bootstrap v3.0.0
@@ -7291,7 +7291,7 @@ td.visible-print {
 }
 
 .navbar-brand {
-  font-family: 'Spinnaker', cursive;
+  font-family: 'Roboto', cursive;
 }
 
 .btn .caret {
@@ -7312,7 +7312,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Spinnaker', cursive;
+  font-family: 'Roboto', cursive;
 }
 
 .text-primary {

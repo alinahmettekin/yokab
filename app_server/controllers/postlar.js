@@ -4,9 +4,11 @@ var router = express.Router();
 const postlar = [
     {
         "postId":"1",
+        "userId":"1001",
         "ad":"alinahmettekin",
         "post":"Hayat kısa, ömür bitiyor",
         "tarih":"29 Ekim 1923",
+        "userPhotoId": "alinahmettekin",
         "yorumlar": [
             {
                 "yorumYapan":"Ömer Faruk",
@@ -25,9 +27,11 @@ const postlar = [
     ,
     {
         "postId":"2",
+        "userId":"1002",
         "ad":"furkanceyhan",
         "post":"bu kibir seni yer bitirir",
         "tarih":"29 Ekim 1932",
+        "userPhotoId": "furkanceyhan",
         "yorumlar": [
             {
                 "yorumYapan":"Nevzat Irkıçatal",
@@ -43,6 +47,18 @@ const postlar = [
             }
         ]
     }
+    ,
+    {
+        "postId":"3",
+        "userId":"1003",
+        "ad":"irfancankahveci",
+        "post":"fenerbahçe şampiyon olacak",
+        "tarih":"12 Mart 2013",
+        "userPhotoId": "irfancankahveci",
+        "yorumlar": [
+            
+        ]
+    }
 ]
 
 const anaSayfa = function (req, res) {
@@ -50,14 +66,14 @@ const anaSayfa = function (req, res) {
     
     })
 }
-const postBilgisi = function (req, res) {
-    res.render('index',{'title':'Post Bilgisi',
+const kullaniciBilgisi = function (req, res) {
+    res.render('index',{'title':'Kullanıcı',
     
     })
 }
 
 const yorumEkle = function (req, res) {
-    res.render('index',{'title':'Hakkında'})
+    res.render('index',{'title':'Yorum Ekle'})
 }
 
 const yorumlar = function (req, res) {
@@ -70,7 +86,7 @@ const yorumlar = function (req, res) {
         }
     }
     if (selectedPost) {
-        res.render('yorumlar', { title: 'Yorumlar', postlar: postlar, postId: postId });
+        res.render('postDetay', { title: 'Yorumlar', postlar: postlar, postId: postId });
     } else {
         res.status(404).send('Post bulunamadı');
     }
@@ -78,7 +94,7 @@ const yorumlar = function (req, res) {
 
 module.exports={
     anaSayfa,
-    postBilgisi,
+    kullaniciBilgisi,
     yorumEkle,
     yorumlar,
     postlar
