@@ -15,7 +15,7 @@ router.get('/post/yorum/yeni', ctrlPostlar.yorumEkle);
 router.get('/hakkinda', ctrlDigerleri.hakkinda);
 router.get('/postdetay', ctrlPostlar.yorumlar);
 router.get('/postdetay/:postId', ctrlPostlar.yorumlar);
-router.get('/:userId', ctrlUsers.getUserProfile)
+router.get('/kullanici/:userId', ctrlUsers.getUserProfile)
 
 
 

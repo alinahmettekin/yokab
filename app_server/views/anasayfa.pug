@@ -1,6 +1,8 @@
 extends layout
 
 block content
+    sidebar
+        
     body
         #banner.page-header
             .row
@@ -14,11 +16,11 @@ block content
                 
                 ul.list-group
                     li.list-group-item
-                        a(href="#") Menü Öğesi 1
+                        a(href="#") En çok beğenilenler
                     li.list-group-item
-                        a(href="#") Menü Öğesi 2
+                        a(href="#") En son paylaşılanlar
                     li.list-group-item
-                        a(href="#") Menü Öğesi 3
+                        a(href="#") Trendler
                 // Sidebar bitişi
 
             .col-lg-10
@@ -30,9 +32,9 @@ block content
                                 .user-info-container
                                     // Kullanıcı fotoğrafı ekleniyor
                                     img(src='/images/'+post.userPhotoId+".jpg", alt='Default User Photo', class='user-photo', style='width: 50px; height: 50px;')
-                                    // Kullanıcı adı ekleniyor
+                                    
                                     h4
-                                        a(href="/"+post.userId)=post.ad
+                                        a(href="/kullanici/"+post.userId)=post.ad
 
                                 h3
                                     p= post.post

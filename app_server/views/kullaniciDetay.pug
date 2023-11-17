@@ -5,26 +5,28 @@ block content
     .row
         .col-lg-2
             // Boş sidebar bölümü
+
         .col-lg-10
-            .user-profile-container
+            .user-profile-container.text-center
                 .user-info
-                    h2 
-                        p=user.ad
+                    h2 Profil: #{user.ad}
 
                     // Kullanıcı fotoğrafını göstermek için kontrol ekleyin
                     if user.userPhotoId
-                        img(src='/images/'+user.userPhotoId+".jpg", alt='User Photo', class='user-photo', style='width: 150px; height: 150px;')
+                        img(src=`/images/${user.userPhotoId}.jpg`, alt='User Photo', class='user-photo img-fluid rounded-circle', style='max-width: 150px;')
 
-                ul.user-details
-                    li 
+                        p.mt-2 Alinahmettekin
+
+                ul.user-details.list-group.text-left.mt-4
+                    li.list-group-item
                         strong UserID:
-                        span #{user.userId}
-                    li 
+                        span.list-group-item-text #{user.userId}
+                    li.list-group-item
                         strong Ad:
-                        span #{user.ad}
-                    li 
+                        span.list-group-item-text #{user.ad}
+                    li.list-group-item
                         strong Son Giriş Zamanı:
-                        span #{user.lastLoginTime}
-                    li 
+                        span.list-group-item-text #{user.lastLoginTime}
+                    li.list-group-item
                         strong Kayıt Tarihi:
-                        span #{user.signUpDate}
+                        span.list-group-item-text #{user.signUpDate}

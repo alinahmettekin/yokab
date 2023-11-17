@@ -59,6 +59,29 @@ const postlar = [
             
         ]
     }
+    ,
+    {
+        "postId":"4",
+        "userId":"1004",
+        "ad":"teoman",
+        "post":"müzik ruhun gıdasıdır",
+        "tarih":"30 Haziran 2023",
+        "userPhotoId": "teoman",
+        "yorumlar": [
+            {
+                "yorumYapan":"Aleyna Tilki",
+                "yorum":"Gerçekten öyle",
+                "yorumTarihi":"11 Haziran 2024"
+            }
+            ,
+            {
+                "yorumYapan":"Yıldız Tilbe",
+                "yorum":"harika bir şarkıcısın",
+                "yorumTarihi":"12 Ağustos 2023"
+
+            }
+        ]
+    }
 ]
 
 const anaSayfa = function (req, res) {
